@@ -1,0 +1,22 @@
+@model List<object>
+@{
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Operations</h4>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Cached server-rendered view</div>
+            </div>
+            <div class="card-body">
+                <p>The API payload behind this page is restored from Redis on repeat renders.</p>
+                @foreach (var item in Model)
+                {
+                    <pre class="mb-1">@item</pre>
+                }
+            </div>
+        </div>
+    </div>
+</div>
